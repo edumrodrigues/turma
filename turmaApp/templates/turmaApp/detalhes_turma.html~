@@ -1,0 +1,25 @@
+{% extends "listaApp/menu.html" %}
+
+
+{% block nome %}
+{{turma.nome}}
+
+
+{% csrf_token %}
+	<br />
+	Professores:<br />
+	{%for professor in turma.professor_set.all %}
+		{{professor.nome}} <br />
+
+	{%endfor%}
+
+
+		<br />
+	Alunos:<br />
+	{%for aluno in turma.aluno_set.all %}
+		{{aluno.nome}} <br />
+
+	{%endfor%}
+
+
+	{% endblock %}

@@ -1,0 +1,71 @@
+.form{
+    background:white; width:70%; 
+    top: 10%;
+    position:absolute; left:15%; height:100%; border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px; border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.h1{
+    position: relative;
+    padding-top: 3%;
+    text-align: center; padding-right: 50px; 
+    font-size: 18pt; color: rgb(71,99,158); 
+
+}
+.h2{
+    position: relative;
+    padding-top: 3%;
+    text-align: center; padding-right: 50px; 
+    font-size: 14pt; color: black; 
+
+}
+.texto_rodape{
+    position: relative;
+    top: 15px;
+    text-align: center; 
+    font-size: 11pt; color: white; 
+
+}
+
+.div_titulo{
+    position: relative;
+    top: 0%;
+    background-color:rgb(210,210,233);  
+    height: 10%;
+    width: 100%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px; border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+}
+.div_rodape{
+    position: relative;
+    top: 110%;
+    background-color:rgb(71,99,158);  
+    height: 7%;
+    width: 100%;
+    
+}
+
+.texto_centralizado{
+    text-align: center;
+}
+
+
+ul.nav li.dropdown:hover > ul.dropdown-menu {
+    	display: block;    
+}
+
+body{
+   background:rgb(235,235,235);
+}
+
+.dropdown-menu a:link{
+    color:white !important;
+}
+.dropdown-menu a:hover{
+    color:rgb(71,99,158)!important;
+}
+.dropdown-menu{
+    background: rgb(71,99,180)  !important;
+}

@@ -1,6 +1,6 @@
 from django.http import HttpResponse, HttpResponseRedirect
 from django.core.urlresolvers import reverse
-from turmaApp.models import Turma, Aluno, Professor
+from listaApp.models import Turma, Aluno, Professor
 from django.views import generic
 from django.core.urlresolvers import reverse_lazy
 

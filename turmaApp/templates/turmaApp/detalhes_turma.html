@@ -1,0 +1,85 @@
+{% include "turmaApp/menu.html" %}
+
+<form action="{% url 'escola:pesquisa' %}"   method="GET" class="form form-inline ">
+
+
+   
+
+    <div class="div_titulo">
+        <h1 class="h1"> Detalhes da turma {{turma.nome}}</h1>
+    </div>
+    
+     <h1 class="h2"> Professores da turma {{turma.nome}}</h1>
+    <div style=" padding-top: 10%;">
+        {% if turma.professor_set.all  %}   
+        <table class="table table-striped" style="text-align: center;" >
+
+            <tr>
+                <th class="texto_centralizado">Professor</th>
+                <th class="texto_centralizado">Disciplina</th>	
+                <th class="texto_centralizado">Tumas que ministra</th>	
+                <th></th>
+                <th></th>
+            </tr>
+           {%for professor in turma.professor_set.all %}
+            <tr>
+                <td>
+                    <a href="#"> {{ professor.nome}} </a>
+
+                </td>	
+                <td>{{ professor.disciplina }}</td>
+                     
+                <td>  
+                    {%for t in  professor.turma.all %}
+                       {{t.nome}} -
+                    
+                    {% endfor %}
+                 
+                </td>
+               
+                <td> <a href="{% url 'escola:edita_professor' professor.id %}"> [Editar]    </a> </td>
+                <td> <a href="{% url 'escola:deleta_professor' professor.id %}"> [Excluir] </a> </td>
+            </tr>
+            {% endfor %}	
+        </table>
+        {% else %}
+        <p>Sem Professores nesta turma... Isso pode ser algo grave!</p>
+        {% endif %}
+
+    </div>
+     <br />
+      <h1 class="h2"> Alunos da turma {{turma.nome}}</h1>
+    <div style=" padding-top: 10%;">
+        {% if turma.aluno_set.all  %}   
+        <table class="table table-striped" style="text-align: center;" >
+
+            <tr>
+                <th class="texto_centralizado">Aluno</th>
+
+                <th></th>
+                <th></th>
+            </tr>
+           {%for aluno in turma.aluno_set.all %}
+            <tr>
+                <td>
+                    <a href="#"> {{ aluno.nome}} </a>
+
+                </td>	
+               
+
+                <td> <a href="{% url 'escola:edita_aluno' aluno.id %}"> [Editar]    </a> </td>
+                <td> <a href="{% url 'escola:deleta_aluno' aluno.id %}"> [Excluir] </a> </td>
+            </tr>
+            {% endfor %}	
+        </table>
+        {% else %}
+        <p>Sem Alunos nesta turma... Esta turma deveria existir?</p>
+        {% endif %}
+
+    </div>
+    
+</form>
+
+<div class="div_rodape">
+  {% include "turmaApp/rodape.html" %}
+</div>

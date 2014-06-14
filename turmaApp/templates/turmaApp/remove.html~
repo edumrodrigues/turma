@@ -1,0 +1,4 @@
+<form method="post">{% csrf_token %}
+    Tem certeza que deseja deletar "{{ object.nome }}" ?
+    <input type="submit" value="Sim, Desejo deletar" />
+</form>

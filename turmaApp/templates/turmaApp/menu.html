@@ -1,0 +1,51 @@
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        {% load staticfiles %}
+        <link rel="stylesheet" type="text/css" href="{% static 'turmaApp/bootstrap/css/bootstrap.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'turmaApp/bootstrap/css/bootstrap.min.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'turmaApp/style.css' %}" />
+        <script type="text/javascript" src="/static/turmaApp/bootstrap/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="/static/turmaApp/bootstrap/js/bootstrap.js"></script>
+    </head>
+    <body >
+
+
+        <nav class="navbar navbar-default" role="navigation"  style="background: rgb(71,99,158)">
+            <ul class="nav navbar-nav navbar-" style="padding-left: 15%; ">
+
+                <li class="dropdown">
+                    <a href="#" style="color: white;" class="dropdown-toggle" data-toggle="dropdown">Turmas<b class="caret"></b></a>
+                    <ul class="dropdown-menu" style="background: buttonshadow" >
+                        <li><a  style="color: white;" href="{% url 'escola:lista_turma'%}">Lista</a></li>
+                        <li><a href="{% url 'escola:cadastro_turma' %}">Cadastrar</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" style="color: white;"  class="dropdown-toggle" data-toggle="dropdown">Alunos<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="{% url 'escola:lista_aluno' %}">Lista</a></li>
+                        <li><a href="{% url 'escola:cadastro_aluno'  %}">Cadastrar</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown" >
+                    <a href="#" style="color: white;"  class="dropdown-toggle" data-toggle="dropdown">Professores<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="{% url 'escola:lista_professor' %}">Lista</a></li>
+                        <li><a href="{% url 'escola:cadastro_professor'  %}">Cadastrar</a></li>
+                    </ul>
+                </li>
+                <li style="position: absolute; right: 18%;">
+                    <a style="color: white;"  href="#">Sobre</a></li>
+            
+
+            </ul>
+        </nav>
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+
+    </body>
+
+
+</html>

@@ -1,0 +1,7 @@
+SAVED
+<br />
+<p /><a href="{% url 'lista:lista_turma'  %}"> Voltar para Lista de turmas </a>
+<p /><a href="{% url 'lista:lista_aluno'  %}"> Voltar para Lista de alunos </a>
+<p /><a href="{% url 'lista:lista_professor'  %}"> Voltar para Lista professores</a>
+
+

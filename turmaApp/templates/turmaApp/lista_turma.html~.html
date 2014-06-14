@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+
+  <body>
+
+{% include "listaApp/menu.html" %}
+
+
+<form action="{% url 'lista:pesquisa' %}"   method="GET" class="form">
+
+        <input type="search"  name="pesquisa">
+        <button type="submit" class="btn btn-primary">Pesquisar</button>
+
+</form>
+{% if lista %}
+    <ul>
+  	  {% for item in lista %}
+		<li>
+		<a href="{% url 'lista:detalhe_turma' item.id %}"> {{ item.nome}} </a>
+		<a href="{% url 'lista:edita_turma' item.id %}"> Editar </a>
+		<a href="{% url 'lista:deleta_turma' item.id %}"> Excluir </a>
+		</li> 
+		{% endfor %}	
+   	 </ul>
+{% else %}
+    <p>Sem cadastros.</p>
+{% endif %}
+
+</form>
+
+
+
+</body>
+
+</html>

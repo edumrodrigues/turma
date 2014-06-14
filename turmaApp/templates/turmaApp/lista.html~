@@ -1,0 +1,17 @@
+<a href="{% url 'lista:cadastro_turma' %}"> Cadastrar Novo </a>
+
+
+{% if lista %}
+    <ul>
+  	  {% for item in lista %}
+		<li>{{ item.nome}}
+		<a href="{% url 'lista:edita_turma' item.id %}"> Editar </a>
+		<a href="{% url 'lista:remove_turma' item.id %}"> Excluir </a>
+		</li> 
+		{% endfor %}	
+   	 </ul>
+{% else %}
+    <p>Sem cadastros.</p>
+{% endif %}
+
+

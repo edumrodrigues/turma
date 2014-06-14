@@ -5,6 +5,6 @@ urlpatterns = patterns('',
     # Examples:
     # url(r'^$', 'turmas.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
- url(r'^escola/', include('turmaApp.urls' , namespace = "escola")),
+ url(r'^escola/', include('turmaApp.urls' , namespace = "lista")),
                         url(r'^admin/', include(admin.site.urls)),
 )

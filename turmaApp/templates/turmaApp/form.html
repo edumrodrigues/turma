@@ -1,0 +1,27 @@
+{% include "turmaApp/menu.html" %}
+
+<form method='POST' class="form form-inline" >
+
+    <div class="div_titulo">
+        <h1 class="h1">Cadastro </h1>
+    </div>
+    <div class="form-search" style="padding-top: 5%; padding-left: 3%">
+
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type='submit' value='Salvar'  class="btn btn-small btn-primary"/>
+    </div>
+
+
+
+
+</form>
+
+
+
+<div class="div_rodape">
+    {% include "turmaApp/rodape.html" %}
+</div>
+
+
+

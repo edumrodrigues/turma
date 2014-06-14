@@ -1,0 +1,58 @@
+{% include "listaApp/menu.html" %}
+
+<form action="{% url 'lista:pesquisa' %}"   method="GET" class="form form-inline ">
+
+
+   
+
+    <div class="div_titulo">
+        <h1 class="h1"> Lista de Professores </h1>
+    </div>
+    <div class="form-search" style="padding-top: 5%; padding-left: 3%">
+
+        <input class="form-control" type="text"  name="pesquisa" style="width: 30%; "  placeholder="Pesquise por uma professor" />
+
+        <button type="submit"  class="btn btn-small btn-primary" >Pesquisar</button>
+
+    </div>
+
+
+    <div style=" padding-top: 10%;">
+        {% if lista %}   
+        <table class="table table-striped" style="text-align: center;" >
+
+            <tr>
+                <th class="texto_centralizado">Professor</th>
+                <th class="texto_centralizado">Discplina</th>		
+                <th class="texto_centralizado">Quantidade de turmas</th>
+                <th></th>
+                <th></th>
+            </tr>
+            {% for item in lista %}
+            <tr>
+                <td>
+                    <a href="#"> {{ item.nome}} </a>
+
+                </td>	
+                <td>{{ item.disciplina }}</td>		
+                <td>{{ item.turma.count }}</td>
+
+                <td> <a href="{% url 'lista:edita_professor' item.id %}"> [Editar]    </a> </td>
+                <td> <a href="{% url 'lista:deleta_professor' item.id %}"> [Excluir] </a> </td>
+            </tr>
+            {% endfor %}	
+        </table>
+        {% else %}
+        <p>Sem cadastros.</p>
+        {% endif %}
+
+    </div>
+  
+</form>
+
+<div class="div_rodape">
+  {% include "listaApp/rodape.html" %}
+</div>
+
+
+

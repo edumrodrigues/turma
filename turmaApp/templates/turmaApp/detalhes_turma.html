@@ -1,6 +1,6 @@
 {% include "turmaApp/menu.html" %}
 
-<form action="{% url 'escola:pesquisa' %}"   method="GET" class="form form-inline ">
+<form class="form form-inline ">
 
 
    
@@ -10,7 +10,7 @@
     </div>
     
      <h1 class="h2"> Professores da turma {{turma.nome}}</h1>
-    <div style=" padding-top: 10%;">
+    <div style=" padding-top: 3%;">
         {% if turma.professor_set.all  %}   
         <table class="table table-striped" style="text-align: center;" >
 
@@ -43,13 +43,13 @@
             {% endfor %}	
         </table>
         {% else %}
-        <p>Sem Professores nesta turma... Isso pode ser algo grave!</p>
+        <p class="h2">Sem Professores nesta turma... Isso pode ser algo grave!</p>
         {% endif %}
 
     </div>
      <br />
       <h1 class="h2"> Alunos da turma {{turma.nome}}</h1>
-    <div style=" padding-top: 10%;">
+    <div style=" padding-top: 3%;">
         {% if turma.aluno_set.all  %}   
         <table class="table table-striped" style="text-align: center;" >
 
@@ -73,7 +73,7 @@
             {% endfor %}	
         </table>
         {% else %}
-        <p>Sem Alunos nesta turma... Esta turma deveria existir?</p>
+        <p class="h2">Sem Alunos nesta turma... Esta turma deveria existir?</p>
         {% endif %}
 
     </div>

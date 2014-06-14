@@ -63,6 +63,9 @@ body{
 .dropdown-menu a:link{
     color:white !important;
 }
+.dropdown-menu a:visited{
+    color:white !important;
+}
 .dropdown-menu a:hover{
     color:rgb(71,99,158)!important;
 }

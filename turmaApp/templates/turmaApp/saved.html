@@ -1,9 +1,21 @@
 {% include "turmaApp/menu.html" %}
 
-SAVED
-<br />
-<p /><a href="{% url 'escola:lista_turma'  %}"> Voltar para Lista de turmas </a>
-<p /><a href="{% url 'escola:lista_aluno'  %}"> Voltar para Lista de alunos </a>
-<p /><a href="{% url 'escola:lista_professor'  %}"> Voltar para Lista professores</a>
+<form  class="form form-inline" >
 
 
+    <h1 class="h1">Sucesso! </h1>
+
+    <br />
+    <div class="h2">
+        <p /><a href="{% url 'escola:lista_turma'  %}"> Voltar para Lista de turmas </a>
+        <p /><a href="{% url 'escola:lista_aluno'  %}"> Voltar para Lista de alunos </a>
+        <p /><a href="{% url 'escola:lista_professor'  %}"> Voltar para Lista professores</a>
+    </div>
+</form>
+
+
+
+
+<div class="div_rodape">
+    {% include "turmaApp/rodape.html" %}
+</div>

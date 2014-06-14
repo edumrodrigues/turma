@@ -1,5 +1,15 @@
+
 {% include "turmaApp/menu.html" %}
-<form method="post">{% csrf_token %}
-    Tem certeza que deseja deletar "{{ object.nome }}" ?
-    <input type="submit" value="Sim, Desejo deletar" />
+
+<form method='POST' class="form form-inline" >
+   {% csrf_token %}
+   <p class="h2"> Tem certeza que deseja deletar "{{ object.nome }}" ?</p>
+   <input type="submit" style="position: relative; left: 40%; " class="btn btn-small btn-primary " value="Sim, Desejo deletar" />
 </form>
+
+
+
+
+<div class="div_rodape">
+    {% include "turmaApp/rodape.html" %}
+</div>

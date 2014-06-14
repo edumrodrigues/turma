@@ -1,18 +1,17 @@
 # Sistema de gerencia de turmas escolares
 
-## DescriÁ„o do Projeto ##
+## Descri√ß√£o do Projeto ##
 
-+Projeto de um sistema  que permite cadastro de turmas, alunos e professores, assim como adicionar os alunos ‡ suas respectivas turmas e tambÈm os professores ‡s possÌveis turmas que ele ir· ministrar aulas. O projeto foi desenvolvido com a linguagem de programaÁ„o Python com a utilizaÁ„o do framework Django. 
+ + Projeto de um sistema  que permite cadastro de turmas, alunos e professores, assim como adicionar os alunos √† suas respectivas turmas e tamb√©m os professores √†s poss√≠veis turmas que ele ir√° ministrar aulas. O projeto foi desenvolvido com a linguagem de programa√ß√£o Python com a utiliza√ß√£o do framework Django. 
  
-## InstalaÁ„o ##
+## Instala√ß√£o ##
  
-+No diretÛrio em que se deseja executar o projeto faÁa:
- ''' console
-   $ git clone git://github.com/66edu/turma.git
- '''
-+Depois do repositÛrio clonado, com o Python 3.4 e Django 1.7, execute o servidor:
- ''' console
+ + No diret√≥rio em que se deseja executar o projeto fa√ßa:
+``` console
+git clone git://github.com/66edu/turma.git
+```
+ + Depois do reposit√≥rio clonado, com o Python 3.4 e Django 1.7, execute o servidor:
+``` console
    $ python manage.py runserver
- '''
-+Agora È sÛ acessar do navegador o endereÁo: http://localhost:8000/escola/
-
+```
+ + Agora √© s√≥ acessar do navegador o endere√ßo: http://localhost:8000/escola/
